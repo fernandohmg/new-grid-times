@@ -27,6 +27,12 @@ const Anchor = styled.a`
       padding-bottom: 0;
       margin-bottom: 0;
     }
+
+    @media ${QUERIES.desktopAndUp} {
+      border-bottom: 1px solid ${COLORS.gray[300]};
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
   }
 `;
 

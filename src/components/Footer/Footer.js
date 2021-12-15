@@ -146,6 +146,10 @@ const TopRow = styled.div`
     justify-content: center;
     gap: 48px;
   }
+
+  @media ${QUERIES.desktopAndUp} {
+    justify-content: flex-end;
+  }
 `;
 
 const Social = styled.div`
@@ -178,6 +182,9 @@ const MainNavArea = styled.div`
     grid-template-columns: repeat(auto-fill, 230px);
     text-align: start;
   }
+  @media ${QUERIES.desktopAndUp} {
+    justify-content: space-between;
+  }
 `;
 
 const MainNavHeading = styled.h2`
@@ -204,6 +211,10 @@ const Subfooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media ${QUERIES.desktopAndUp} {
+    align-items: flex-start;
+  }
 `;
 
 const Logo = styled.a`

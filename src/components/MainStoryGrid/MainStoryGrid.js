@@ -93,17 +93,28 @@ const StoryList = styled.div`
 
     @media ${QUERIES.desktopAndUp} {
       flex-direction: column;
-      gap: 32px;
+      gap: 0;
     }
     `}
 `;
 
 const OpinionSection = styled.section`
   grid-area: opinion-stories;
+
+  @media ${QUERIES.desktopAndUp} {
+    border-left: 1px solid ${COLORS.gray[300]};
+    padding-left: 16px;
+  }
 `;
 
 const AdvertisementSection = styled.section`
   grid-area: advertisement;
+
+  @media ${QUERIES.desktopAndUp} {
+    border-top: 1px solid ${COLORS.gray[300]};
+    padding-top: 16px;
+    margin-top: 16px;
+  }
 `;
 
 export default MainStoryGrid;

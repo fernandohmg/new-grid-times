@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { COLORS, QUERIES } from "../../constants";
 import { MARKET_DATA, SPORTS_STORIES } from "../../data";
 import MarketCard from "../MarketCard";
 import MiniStory from "../MiniStory";
@@ -45,14 +46,25 @@ const SpecialtyStoryGrid = () => {
 const Wrapper = styled.div`
   display: grid;
   gap: 48px;
+
+  @media ${QUERIES.desktopAndUp} {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
 `;
 
-const MarketsSection = styled.section``;
+const MarketsSection = styled.section`
+  @media ${QUERIES.desktopAndUp} {
+    border-right: 1px solid ${COLORS.gray[300]};
+    padding-right: 16px;
+    margin-right: 16px;
+  }
+`;
 
 const MarketCards = styled.div`
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, 180px);
+  grid-template-columns: repeat(auto-fill, 175px);
 `;
 
 const SportsSection = styled.section``;
