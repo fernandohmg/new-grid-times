@@ -1,23 +1,32 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
+import { COLORS } from "../../constants";
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
-    <a href={`/story/${id}`}>
+    <Anchor href={`/story/${id}`}>
       <Wrapper>
         <Image alt={image.alt} src={image.src} />
         <Heading>{title}</Heading>
         <Abstract>{abstract}</Abstract>
       </Wrapper>
-    </a>
+    </Anchor>
   );
 };
+
+const Anchor = styled.a`
+  &:not(:last-of-type) {
+    border-bottom: 1px solid ${COLORS.gray[300]};
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+`;
 
 const Wrapper = styled.article`
   display: grid;
   grid-template-areas:
-    'image heading'
-    'image abstract';
+    "image heading"
+    "image abstract";
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
