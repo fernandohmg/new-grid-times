@@ -1,11 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-
-import { MARKET_DATA, SPORTS_STORIES } from '../../data';
-
-import MarketCard from '../MarketCard';
-import SectionTitle from '../SectionTitle';
-import MiniStory from '../MiniStory';
+import React from "react";
+import styled from "styled-components/macro";
+import { MARKET_DATA, SPORTS_STORIES } from "../../data";
+import MarketCard from "../MarketCard";
+import MiniStory from "../MiniStory";
+import SectionTitle from "../SectionTitle";
 
 const SpecialtyStoryGrid = () => {
   return (
@@ -13,8 +11,8 @@ const SpecialtyStoryGrid = () => {
       <MarketsSection>
         <SectionTitle
           cornerLink={{
-            href: '/markets',
-            content: 'Visit Markets data »',
+            href: "/markets",
+            content: "Visit Markets data »",
           }}
         >
           Markets
@@ -28,8 +26,8 @@ const SpecialtyStoryGrid = () => {
       <SportsSection>
         <SectionTitle
           cornerLink={{
-            href: '/sports',
-            content: 'Visit Sports page »',
+            href: "/sports",
+            content: "Visit Sports page »",
           }}
         >
           Sports
@@ -51,10 +49,19 @@ const Wrapper = styled.div`
 
 const MarketsSection = styled.section``;
 
-const MarketCards = styled.div``;
+const MarketCards = styled.div`
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, 180px);
+  /* justify-content: center; */
+`;
 
 const SportsSection = styled.section``;
 
-const SportsStories = styled.div``;
+const SportsStories = styled.div`
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, 180px);
+`;
 
 export default SpecialtyStoryGrid;
