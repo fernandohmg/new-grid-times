@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { QUERIES } from "../../constants";
+import { COLORS, QUERIES } from "../../constants";
 import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from "../../data";
 import Advertisement from "../Advertisement";
 import MainStory from "../MainStory";
@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   margin-bottom: 48px;
 
   @media ${QUERIES.tabletAndUp} {
-    gap: 32px;
+    gap: 16px;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "main-story secondary-stories"
@@ -61,6 +61,11 @@ const Wrapper = styled.div`
 
 const MainStorySection = styled.section`
   grid-area: main-story;
+
+  @media ${QUERIES.tabletAndUp} {
+    border-right: 1px solid ${COLORS.gray[300]};
+    padding-right: 16px;
+  }
 `;
 
 const SecondaryStorySection = styled.section`

@@ -53,7 +53,6 @@ const MarketCards = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, 180px);
-  /* justify-content: center; */
 `;
 
 const SportsSection = styled.section``;
