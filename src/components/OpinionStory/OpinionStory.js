@@ -21,6 +21,12 @@ const Anchor = styled.a`
     border-bottom: 1px solid ${COLORS.gray[300]};
     padding-bottom: 16px;
     margin-bottom: 16px;
+
+    @media ${QUERIES.tabletAndUp} {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 `;
 
