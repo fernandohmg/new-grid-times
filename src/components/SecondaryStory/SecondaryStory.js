@@ -33,11 +33,17 @@ const Wrapper = styled.article`
 
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
     grid-template-areas:
       "image"
       "heading"
       "abstract";
+  }
+
+  @media ${QUERIES.desktopAndUp} {
+    grid-template-areas:
+      "image heading"
+      "image abstract";
+    grid-template-columns: 120px 1fr;
   }
 `;
 

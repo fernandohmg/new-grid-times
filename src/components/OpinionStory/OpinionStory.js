@@ -40,6 +40,11 @@ const Wrapper = styled.article`
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  @media ${QUERIES.desktopAndUp} {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 `;
 
 const Avatar = styled.img`
